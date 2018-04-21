@@ -1,0 +1,89 @@
+
+/*h2{
+background-color: #FEFFED;
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 10px 10px 0 0;
+}*/
+hr{
+margin: 10px -50px;
+border: 0;
+border-top: 1px solid #ccc;
+margin-bottom: 40px;
+}
+div.container{
+width: 900px;
+height: 610px;
+margin:35px auto;
+font-family: 'Raleway', sans-serif;
+}
+div.main{
+width: 300px;
+padding: 10px 50px 25px;
+border: 2px solid gray;
+border-radius: 10px;
+font-family: raleway;
+float:left;
+margin-top:50px;
+}
+label{
+color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 14px;
+font-weight: bold;
+}
+center{
+font-size:32px;
+}
+#uname #pwd{
+font-size: 16px;
+background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+border: 1px solid #e5a900;
+color: #4E4D4B;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+border-radius: 5px;
+padding: 10px 0;
+outline:none;
+}
+input[type=button]:hover{
+background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.buddyList{
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+}

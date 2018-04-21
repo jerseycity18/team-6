@@ -1,0 +1,180 @@
+<!doctype html>
+<head>
+<title>Javascript Login Form </title>
+<link rel="stylesheet" href="BestBuddy/CSS/style.css"/>
+<body>
+<p style="text-align:center; font-weight:bold;font-size:14px"> Welcome to BestBuddy </p>
+<!--<input type="text" id="myInput" onkeyup="tableData()" placeholder="Search via Zipcode" title="Type zipcode">-->
+<p style="font-weight:bold;font-size:14px"> Participants </p>
+<table id="pTable" >
+  <tr class="header">
+    <th>Name</th>
+    <th>Location</th>
+	<th>Zipcode</th>
+	<th>Waiting Time</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+	<td>07305</td>
+	<td>10 Days</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>United States</td>
+	<td>07305</td>
+	<td>5 Days</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+	<td>07305</td>
+	<td>10 Days</td>
+  </tr>
+  <tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+	<td>07310</td>
+	<td>2 Days</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+	<td>15220</td>
+	<td>10 Days</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+	<td>15220</td>
+	<td>10 Days</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>UK</td>
+	<td>77058</td>
+	<td>5 Days</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+	<td>77061</td>
+	<td>3 Days</td>
+  </tr>
+</table>
+<br/> <br/> <br/>
+
+<p style="font-weight:bold;font-size:14px"> Peer Buddy </p>
+<table id="myTable" style ="border:1px solid black" >
+<input type="text" id="myInput" onkeyup="tableData()" placeholder="Search via Name" title="Type Name"><br/> <br/>
+  <tr class="header">
+    <th>Name</th>
+    <th>Location</th>
+	<th>Zipcode</th>
+	<th>Waiting Time</th>
+  </tr>
+  <tr>
+	<td>Jasmine </td>
+    <td>Germany</td>
+	<td>07306</td>
+	<td>10 Days</td>
+  </tr>
+  <tr>
+    <td>Ryan Todd</td>
+    <td>United States</td>
+	<td>07310</td>
+	<td>5 Days</td>
+  </tr>
+  <tr>
+    <td>April Mark</td>
+    <td>UK</td>
+	<td>72756</td>
+	<td>10 Days</td>
+  </tr>
+  <tr>
+    <td>Smith Steve</td>
+    <td>Germany</td>
+	<td>63455</td>
+	<td>2 Days</td>
+  </tr>
+  <tr>
+    <td>Bacchus Winecellars</td>
+    <td>Canada</td>
+	<td>15220</td>
+	<td>10 Days</td>
+  </tr>
+  <tr>
+    <td>Larry Hore</td>
+    <td>Italy</td>
+	<td>15220</td>
+	<td>10 Days</td>
+  </tr>
+  <tr>
+    <td>Stevens LU</td>
+    <td>UK</td>
+	<td>77051</td>
+	<td>5 Days</td>
+  </tr>
+  <tr>
+    <td>Yasik Jake</td>
+    <td>France</td>
+	<td>72756</td>
+	<td>3 Days</td>
+  </tr>
+</table>
+<br/><br/><br/>
+
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer",
+	{
+		title:{
+			text: "Gaming Consoles Sold in 2012"
+		},
+		legend: {
+			maxWidth: 350,
+			itemWidth: 120
+		},
+		data: [
+		{
+			type: "pie",
+			showInLegend: true,
+			legendText: "{indexLabel}",
+			dataPoints: [
+				{ y: 4181563, indexLabel: "PlayStation 3" },
+				{ y: 2175498, indexLabel: "Wii" },
+				{ y: 3125844, indexLabel: "Xbox 360" },
+				{ y: 1176121, indexLabel: "Nintendo DS"},
+				{ y: 1727161, indexLabel: "PSP" },
+				{ y: 4303364, indexLabel: "Nintendo 3DS"},
+				{ y: 1717786, indexLabel: "PS Vita"}
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script>
+function tableData() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</body>
+</html>
